@@ -24,3 +24,9 @@ jobs:
 
       - name: Build Application
         run: ./mvnw clean package
+         - name: Trigger Automation Repository
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+          repository: ALamin068/inventory-automation-suite
+          event-type: run-automation
