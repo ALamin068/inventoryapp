@@ -9,6 +9,6 @@ public class HomeController {
     @GetMapping("/")
     public String home() {
 
-        return "Inventory Application Running! Al Amin is learning";
+        return "Inventory Application Running! Al Amin is learning!";
     }
 }
